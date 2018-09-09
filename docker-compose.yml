@@ -1,0 +1,29 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    container_name: mongo
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 27017:27017
+  redis:
+    image: redis
+    container_name: redis
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 6379:6379
+  papaye:
+    image: papaye
+    command: node init.js
+    depends_on:
+      - redis
+      - mongo
+    ports:
+      - 80:8080
+      - 3333:3333
+      - 3256:3256
+volumes:
+    papaye:
+      driver: local

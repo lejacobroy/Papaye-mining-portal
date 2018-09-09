@@ -8,3 +8,4 @@ logs/
 !.gitkeep
 .DS_Store
 docker/config/*
+config
