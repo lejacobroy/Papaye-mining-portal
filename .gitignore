@@ -7,5 +7,3 @@ pool_configs/*.json
 logs/
 !.gitkeep
 .DS_Store
-docker/config/*
-config
