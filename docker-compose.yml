@@ -4,7 +4,7 @@ services:
     build: ./
     command: node init.js
     ports:
-      - 8080:8080
+      - 81:8080
       - 3333:3333
     volumes:
         - ./:/opt/papaye/
