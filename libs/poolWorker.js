@@ -161,6 +161,8 @@ module.exports = function () {
                                     authCallback(false);
                                 } else {
                                     //username check here on tmp[0]
+                                    //need to create function
+
                                     //workername on tmp[1]
 
                                     /*pool.daemon.cmd('validateaddress', [tmp[0]], function (results) {
