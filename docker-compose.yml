@@ -1,17 +1,8 @@
 version: "3"
 services:
-  redis:
-    image: redis
-    container_name: redis
-    environment:
-      - discovery.type=single-node
-    ports:
-      - 6379:6379
   papaye:
     build: ./
     command: node init.js
-    depends_on:
-      - redis
     ports:
       - 8080:8080
       - 3333:3333
