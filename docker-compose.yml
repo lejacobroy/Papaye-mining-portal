@@ -1,12 +1,5 @@
 version: "3"
 services:
-  mongo:
-    image: mongo
-    container_name: mongo
-    environment:
-      - discovery.type=single-node
-    ports:
-      - 27017:27017
   redis:
     image: redis
     container_name: redis
@@ -19,7 +12,6 @@ services:
     command: node init.js
     depends_on:
       - redis
-      - mongo
     ports:
       - 80:8080
       - 3333:3333
