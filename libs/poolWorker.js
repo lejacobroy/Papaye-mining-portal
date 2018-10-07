@@ -160,14 +160,20 @@ module.exports = function () {
                                 if (tmp.length !== 2) {
                                     authCallback(false);
                                 } else {
-                                    pool.daemon.cmd('validateaddress', [tmp[0]], function (results) {
+                                    //username check here on tmp[0]
+                                    //workername on tmp[1]
+
+                                    /*pool.daemon.cmd('validateaddress', [tmp[0]], function (results) {
                                         var isValid = results.filter(function (r) {
                                             return r.response.isvalid
                                         }).length > 0;
                                         authCallback(isValid);
-                                    });
+
+                                    });*/
                                 }
                             } else {
+
+                                /*
                                 //only address
                                 pool.daemon.cmd('validateaddress', [workerName], function (results) {
                                     var isValid = results.filter(function (r) {
@@ -175,6 +181,7 @@ module.exports = function () {
                                     }).length > 0;
                                     authCallback(isValid);
                                 });
+                                */
                             }
                         } else {
                             authCallback(false);
